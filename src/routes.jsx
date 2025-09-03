@@ -8,7 +8,11 @@ import {
 import { Layout } from "./pages/Layout";
 import { Home } from "./pages/Home";
 import { Single } from "./pages/Single";
-import { Demo } from "./pages/Demo";
+// import { Demo } from "./pages/Demo";
+import { Test } from "./pages/Test";
+import { Contacts } from "./pages/Contacts";
+import { UpdateContacts } from "./pages/UpdateContact"
+
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -24,7 +28,10 @@ export const router = createBrowserRouter(
         {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
         <Route path= "/" element={<Home />} />
         <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
-        <Route path="/demo" element={<Demo />} />
+        {/* <Route path="/demo" element={<Demo />} /> */}
+        <Route path="/test" element={<Test />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/updatecontacts/:id" element={<UpdateContacts />} />
       </Route>
     )
 );
